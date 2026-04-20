@@ -1,0 +1,141 @@
+.ab-banners.ab-full-width {
+  width: 100vw;
+  max-width: 100vw !important;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  position: relative;
+  height: auto; 
+}
+.ab-slides {
+  position: relative;
+}
+.ab-banner-item {
+  display: none;
+}
+.ab-banner-item.active {
+  display: block;
+}
+/* Slides ocupam 100% */
+.ab-banners.ab-full-width .ab-slides,
+.ab-banners.ab-full-width .ab-banner-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.ab-banners.ab-full-width .ab-banner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* corta sem distorcer */
+  display: block;
+}
+
+/* Arrows */
+.ab-prev,
+.ab-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 30;
+}
+.ab-prev {
+  left: 10px;
+}
+.ab-next {
+  right: 10px;
+}
+
+/* --- Navegação por Dots --- */
+.ab-dotsx {
+  position: absolute;
+  bottom: 15px; /* distância do rodapé do banner */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 9999;
+}
+
+.ab-dotx {
+  width: 18px;
+  height: 4.5px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  border: .5px solid #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+  outline: none;
+}
+
+.ab-dotsx .ab-dotx.active {
+  background: #ad005b !important;
+  border: none;
+}
+
+/* --- Navegação por Setas --- */
+.ab-prevx,
+.ab-nextx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 5;
+}
+
+.ab-prevx:hover,
+.ab-nextx:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.ab-prevx {
+  left: 10px;
+}
+
+.ab-nextx {
+  right: 10px;
+}
+
+/* --- Container principal do banner --- */
+.ab-banners.ab-full-width {
+  position: relative;
+  overflow: hidden;
+}
+
+.ab-slides {
+  position: relative;
+}
+
+.ab-banner-item {
+  display: none;
+  text-align: center;
+}
+
+.ab-banner-item img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .ab-banners.ab-full-width {
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .ab-banners.ab-full-width {
+    height: auto;
+  }
+}
